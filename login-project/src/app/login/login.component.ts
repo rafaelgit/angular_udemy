@@ -28,7 +28,8 @@ export class LoginComponent implements OnInit {
       this.msg = "Usuário Validado! Redirecionando..."
       // window.location.href = '/home';
       // this.router.navigateByUrl('/home');
-      this.router.navigateByUrl('/home', { state: { username: this.username } });
+      // this.router.navigateByUrl('/home', { state: { username: this.username } });
+      this.router.navigate(['home'], {state: {username: this.username}});
     } else {
       // alert("Usuário ou Senha incorretas....")
       this.status = "danger"
